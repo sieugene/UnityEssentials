@@ -41,6 +41,17 @@ public class UpdateCollectibleCount : MonoBehaviour
         }
 
         // Update the collectible count display
-        collectibleText.text = $"Collectibles remaining: {totalCollectibles}";
+        if (totalCollectibles == 0)
+        {
+            collectibleText.text = "Congratulations, you got them all!";
+        }
+        else
+        {
+            collectibleText.text = $"Collectibles remaining: {totalCollectibles}";
+
+        }
+
+
+
     }
 }
